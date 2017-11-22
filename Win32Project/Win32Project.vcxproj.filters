@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="source\main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\app\app.cpp">
+      <Filter>source\app</Filter>
+    </ClCompile>
+    <ClCompile Include="source\device\input.cpp">
+      <Filter>source\device</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gui\imgui_demo.cpp">
+      <Filter>source\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gui\imgui_draw.cpp">
+      <Filter>source\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gui\imgui_impl_dx11.cpp">
+      <Filter>source\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="source\lib\vector.cpp">
+      <Filter>source\lib</Filter>
+    </ClCompile>
+    <ClCompile Include="source\model\model_manager.cpp">
+      <Filter>source\model</Filter>
+    </ClCompile>
+    <ClCompile Include="source\model\model.cpp">
+      <Filter>source\model</Filter>
+    </ClCompile>
+    <ClCompile Include="source\object\object.cpp">
+      <Filter>source\object</Filter>
+    </ClCompile>
+    <ClCompile Include="source\object\camera\camera.cpp">
+      <Filter>source\object\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="source\object\camera\light_camera.cpp">
+      <Filter>source\object\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="source\object\camera\main_camera.cpp">
+      <Filter>source\object\camera</Filter>
+    </ClCompile>
+    <ClCompile Include="source\object\canvas\canvas.cpp">
+      <Filter>source\object\canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="source\object\canvas\canvas_manager.cpp">
+      <Filter>source\object\canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="source\object\canvas\shadow_map\shadow_map.cpp">
+      <Filter>source\object\canvas\shadow_map</Filter>
+    </ClCompile>
+    <ClCompile Include="source\object\character\player\player.cpp">
+      <Filter>source\object\character\player</Filter>
+    </ClCompile>
+    <ClCompile Include="source\object\character\character.cpp">
+      <Filter>source\object\character</Filter>
+    </ClCompile>
+    <ClCompile Include="source\object\mesh\mesh.cpp">
+      <Filter>source\object\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="source\object\mesh\mesh_manager.cpp">
+      <Filter>source\object\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="source\object\mesh\skybox\skybox.cpp">
+      <Filter>source\object\mesh\sky_box</Filter>
+    </ClCompile>
+    <ClCompile Include="source\object\mesh\meshfiled\mesh_field.cpp">
+      <Filter>source\object\mesh\mesh_filed</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gui\imgui.cpp">
+      <Filter>source\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="source\renderer\render_manager.cpp">
+      <Filter>source\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="source\renderer\renderer.cpp">
+      <Filter>source\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="source\renderer\app_renderer.cpp">
+      <Filter>source\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="source\shader\shader_manager.cpp">
+      <Filter>source\shader</Filter>
+    </ClCompile>
+    <ClCompile Include="source\shader\shader.cpp">
+      <Filter>source\shader</Filter>
+    </ClCompile>
+    <ClCompile Include="source\texture\texture.cpp">
+      <Filter>source\texture</Filter>
+    </ClCompile>
+    <ClCompile Include="source\texture\texture_manager.cpp">
+      <Filter>source\texture</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\app\app.h">
+      <Filter>source\app</Filter>
+    </ClInclude>
+    <ClInclude Include="source\device\input.h">
+      <Filter>source\device</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\imgui_impl_dx11.h">
+      <Filter>source\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\imgui_internal.h">
+      <Filter>source\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\stb_rect_pack.h">
+      <Filter>source\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\stb_textedit.h">
+      <Filter>source\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\stb_truetype.h">
+      <Filter>source\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lib\vector.h">
+      <Filter>source\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="source\model\model_manager.h">
+      <Filter>source\model</Filter>
+    </ClInclude>
+    <ClInclude Include="source\model\model.h">
+      <Filter>source\model</Filter>
+    </ClInclude>
+    <ClInclude Include="source\object\object.h">
+      <Filter>source\object</Filter>
+    </ClInclude>
+    <ClInclude Include="source\object\camera\camera.h">
+      <Filter>source\object\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="source\object\camera\light_camera.h">
+      <Filter>source\object\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="source\object\camera\main_camera.h">
+      <Filter>source\object\camera</Filter>
+    </ClInclude>
+    <ClInclude Include="source\object\canvas\canvas.h">
+      <Filter>source\object\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="source\object\canvas\canvas_manager.h">
+      <Filter>source\object\canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="source\object\canvas\shadow_map\shadow_map.h">
+      <Filter>source\object\canvas\shadow_map</Filter>
+    </ClInclude>
+    <ClInclude Include="source\object\character\player\player.h">
+      <Filter>source\object\character\player</Filter>
+    </ClInclude>
+    <ClInclude Include="source\object\character\character.h">
+      <Filter>source\object\character</Filter>
+    </ClInclude>
+    <ClInclude Include="source\object\mesh\mesh.h">
+      <Filter>source\object\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="source\object\mesh\mesh_manager.h">
+      <Filter>source\object\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="source\object\mesh\skybox\skybox.h">
+      <Filter>source\object\mesh\sky_box</Filter>
+    </ClInclude>
+    <ClInclude Include="source\object\mesh\meshfiled\mesh_field.h">
+      <Filter>source\object\mesh\mesh_filed</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\imconfig.h">
+      <Filter>source\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\imgui.h">
+      <Filter>source\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="source\renderer\render_manager.h">
+      <Filter>source\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="source\renderer\renderer.h">
+      <Filter>source\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="source\renderer\app_renderer.h">
+      <Filter>source\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="source\shader\shader_manager.h">
+      <Filter>source\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="source\shader\shader.h">
+      <Filter>source\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="source\texture\stb_image.h">
+      <Filter>source\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="source\texture\texture.h">
+      <Filter>source\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="source\texture\texture_manager.h">
+      <Filter>source\texture</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>resource</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{f34a030d-286c-4a41-a7ab-894aa81fcb0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\app">
+      <UniqueIdentifier>{e42cca67-b5be-4d5a-ad12-cb7b68be5984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\device">
+      <UniqueIdentifier>{7c2712ce-f1e1-4131-bf09-9902f0c95a6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui">
+      <UniqueIdentifier>{cec83c26-1945-465d-9ad6-c829667cc588}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\lib">
+      <UniqueIdentifier>{a66d6b0d-177b-4000-8a77-624307d765ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\model">
+      <UniqueIdentifier>{fa8c0436-7830-4171-9684-01e2b88e6ccb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\object">
+      <UniqueIdentifier>{eb3c6a59-b8a7-4d4f-8045-5648c4eaefc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\object\camera">
+      <UniqueIdentifier>{a2b8a8f8-d5e9-4949-b666-463e932a95ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\object\canvas">
+      <UniqueIdentifier>{a36b9f59-32f9-464c-a4eb-096923cb2b79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\object\character">
+      <UniqueIdentifier>{90b3375b-43d0-4de7-81dc-0bd702e028d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\object\mesh">
+      <UniqueIdentifier>{3f75d414-25c2-4ddb-988f-3c8174efbeb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\object\canvas\shadow_map">
+      <UniqueIdentifier>{d728a35c-cfa2-452d-a9a2-09fe0de1dbb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\object\character\player">
+      <UniqueIdentifier>{6fe94d4b-beb0-42fd-8966-ceb8b9145bc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\object\mesh\mesh_filed">
+      <UniqueIdentifier>{13a57f6e-46a8-46f3-abd7-5127d59e33b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\object\mesh\sky_box">
+      <UniqueIdentifier>{fc718a1b-e8af-47de-a00e-db728a58251b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\renderer">
+      <UniqueIdentifier>{3e5933e2-1a08-47f2-aa3a-3b8da0baeab8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\shader">
+      <UniqueIdentifier>{88562584-f9f7-4cb1-9d97-7b8dbc72262c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\texture">
+      <UniqueIdentifier>{4c242553-53ca-4306-9e07-e8b7788121d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{5234bdb4-51b7-45a3-b7b4-9076a05cdd46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\shader">
+      <UniqueIdentifier>{75267d7b-3aa2-4108-a41b-29046fbe86c0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="taso.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="resource\shader\matPixelShader.hlsl">
+      <Filter>resource\shader</Filter>
+    </FxCompile>
+    <FxCompile Include="resource\shader\NormalPShader.hlsl">
+      <Filter>resource\shader</Filter>
+    </FxCompile>
+    <FxCompile Include="resource\shader\NormalVShader.hlsl">
+      <Filter>resource\shader</Filter>
+    </FxCompile>
+    <FxCompile Include="resource\shader\Pixel3DShader.hlsl">
+      <Filter>resource\shader</Filter>
+    </FxCompile>
+    <FxCompile Include="resource\shader\PixelShader.hlsl">
+      <Filter>resource\shader</Filter>
+    </FxCompile>
+    <FxCompile Include="resource\shader\Shadow.hlsl">
+      <Filter>resource\shader</Filter>
+    </FxCompile>
+    <FxCompile Include="resource\shader\SkinMeshShader.hlsl">
+      <Filter>resource\shader</Filter>
+    </FxCompile>
+    <FxCompile Include="resource\shader\ToonPixel.hlsl">
+      <Filter>resource\shader</Filter>
+    </FxCompile>
+    <FxCompile Include="resource\shader\ToonShader.hlsl">
+      <Filter>resource\shader</Filter>
+    </FxCompile>
+    <FxCompile Include="resource\shader\Vertex3DShader.hlsl">
+      <Filter>resource\shader</Filter>
+    </FxCompile>
+    <FxCompile Include="resource\shader\VertexShader.hlsl">
+      <Filter>resource\shader</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>
