@@ -1,34 +1,4 @@
-﻿C:\Users\fukuoka.shota\Desktop\taso\Win32Project\resource\shader\matPixelShader.hlsl(19,21-43): warning X3206: 'dot': implicit truncation of vector type
-  
-  compilation object save succeeded; see C:\Users\fukuoka.shota\Desktop\taso\Win32Project\bin\shader\matPixelShader.cso
-  compilation object save succeeded; see C:\Users\fukuoka.shota\Desktop\taso\Win32Project\bin\shader\NormalPShader.cso
-  compilation object save succeeded; see C:\Users\fukuoka.shota\Desktop\taso\Win32Project\bin\shader\NormalVShader.cso
-  compilation object save succeeded; see C:\Users\fukuoka.shota\Desktop\taso\Win32Project\bin\shader\Pixel3DShader.cso
-C:\Users\fukuoka.shota\Desktop\taso\Win32Project\resource\shader\PixelShader.hlsl(24,22-44): warning X3206: 'dot': implicit truncation of vector type
-C:\Users\fukuoka.shota\Desktop\taso\Win32Project\resource\shader\PixelShader.hlsl(36,8-55): warning X3206: implicit truncation of vector type
-  
-  compilation object save succeeded; see C:\Users\fukuoka.shota\Desktop\taso\Win32Project\bin\shader\PixelShader.cso
-  compilation object save succeeded; see C:\Users\fukuoka.shota\Desktop\taso\Win32Project\bin\shader\Shadow.cso
-C:\Users\fukuoka.shota\Desktop\taso\Win32Project\resource\shader\SkinMeshShader.hlsl(46,12-29): warning X3206: 'mul': implicit truncation of vector type
-  
-  compilation object save succeeded; see C:\Users\fukuoka.shota\Desktop\taso\Win32Project\bin\shader\SkinMeshShader.cso
-C:\Users\fukuoka.shota\Desktop\taso\Win32Project\resource\shader\ToonPixel.hlsl(26,22-44): warning X3206: 'dot': implicit truncation of vector type
-C:\Users\fukuoka.shota\Desktop\taso\Win32Project\resource\shader\ToonPixel.hlsl(40,8-55): warning X3206: implicit truncation of vector type
-  
-  compilation object save succeeded; see C:\Users\fukuoka.shota\Desktop\taso\Win32Project\bin\shader\ToonPixel.cso
-C:\Users\fukuoka.shota\Desktop\taso\Win32Project\resource\shader\ToonShader.hlsl(70,17-31): warning X3206: 'dot': implicit truncation of vector type
-C:\Users\fukuoka.shota\Desktop\taso\Win32Project\resource\shader\ToonShader.hlsl(72,9-43): warning X3206: implicit truncation of vector type
-C:\Users\fukuoka.shota\Desktop\taso\Win32Project\resource\shader\ToonShader.hlsl(75,17-33): warning X3206: 'dot': implicit truncation of vector type
-C:\Users\fukuoka.shota\Desktop\taso\Win32Project\resource\shader\ToonShader.hlsl(85,13-27): warning X3206: 'dot': implicit truncation of vector type
-C:\Users\fukuoka.shota\Desktop\taso\Win32Project\resource\shader\ToonShader.hlsl(39,14-27): warning X3578: Output value 'main' is not completely initialized
-  
-  compilation object save succeeded; see C:\Users\fukuoka.shota\Desktop\taso\Win32Project\bin\shader\ToonShader.cso
-  compilation object save succeeded; see C:\Users\fukuoka.shota\Desktop\taso\Win32Project\bin\shader\Vertex3DShader.cso
-C:\Users\fukuoka.shota\Desktop\taso\Win32Project\resource\shader\VertexShader.hlsl(66,13-27): warning X3206: 'dot': implicit truncation of vector type
-C:\Users\fukuoka.shota\Desktop\taso\Win32Project\resource\shader\VertexShader.hlsl(33,14-27): warning X3578: Output value 'main' is not completely initialized
-  
-  compilation object save succeeded; see C:\Users\fukuoka.shota\Desktop\taso\Win32Project\bin\shader\VertexShader.cso
-  texture_manager.cpp
+﻿  texture_manager.cpp
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52937): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
@@ -412,7 +382,7 @@ c:\users\fukuoka.shota\desktop\taso\win32project\source\shader\shader.cpp(55): w
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(207): note: 'fopen' の宣言を確認してください
 c:\users\fukuoka.shota\desktop\taso\win32project\source\shader\shader.cpp(152): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(207): note: 'fopen' の宣言を確認してください
-  render_manager.cpp
+  renderer.cpp
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52937): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
@@ -507,7 +477,7 @@ c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathvector.inl(1269): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(518): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(519): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-  renderer.cpp
+  render_manager.cpp
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52937): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
@@ -697,7 +667,6 @@ c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathvector.inl(1269): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(518): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(519): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-  object.cpp
   skybox.cpp
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52937): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
@@ -825,101 +794,6 @@ c:\users\fukuoka.shota\desktop\taso\win32project\source\object\mesh\skybox\skybo
 c:\users\fukuoka.shota\desktop\taso\win32project\source\object\mesh\skybox\skybox.cpp(109): warning C4305: '引数': 'double' から 'const float' へ切り詰めます。
 c:\users\fukuoka.shota\desktop\taso\win32project\source\object\mesh\skybox\skybox.cpp(110): warning C4305: '引数': 'double' から 'const float' へ切り詰めます。
 c:\users\fukuoka.shota\desktop\taso\win32project\source\object\mesh\skybox\skybox.cpp(111): warning C4305: '引数': 'double' から 'const float' へ切り詰めます。
-  mesh_manager.cpp
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52937): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52946): note: 'DXGI_STATUS_CLIPPED' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52955): note: 'DXGI_STATUS_NO_REDIRECTION' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52964): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52973): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52982): note: 'DXGI_STATUS_MODE_CHANGED' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52991): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53006): note: 'DXGI_ERROR_INVALID_CALL' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53015): note: 'DXGI_ERROR_NOT_FOUND' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53024): note: 'DXGI_ERROR_MORE_DATA' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53033): note: 'DXGI_ERROR_UNSUPPORTED' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53042): note: 'DXGI_ERROR_DEVICE_REMOVED' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53051): note: 'DXGI_ERROR_DEVICE_HUNG' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53061): note: 'DXGI_ERROR_DEVICE_RESET' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53070): note: 'DXGI_ERROR_WAS_STILL_DRAWING' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53080): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53089): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53099): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53108): note: 'DXGI_ERROR_NONEXCLUSIVE' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53117): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53127): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53136): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53400): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53409): note: 'D3D11_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53419): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53428): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53376): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53385): note: 'D3D10_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2662): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2663): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2664): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2665): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2666): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2667): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2668): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2689): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2690): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2691): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2694): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2695): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2698): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2702): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2712): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2713): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2715): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2716): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2717): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2727): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2728): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2729): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2730): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2731): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2732): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2742): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2743): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2754): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(2254): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(4523): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(4577): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(4639): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(4707): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(4770): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(4832): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathvector.inl(1269): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(518): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(519): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
   mesh_field.cpp
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52937): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
@@ -1032,6 +906,101 @@ c:\users\fukuoka.shota\desktop\taso\win32project\source\object\mesh\meshfiled\me
 c:\users\fukuoka.shota\desktop\taso\win32project\source\object\mesh\meshfiled\mesh_field.cpp(305): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
 c:\users\fukuoka.shota\desktop\taso\win32project\source\object\mesh\meshfiled\mesh_field.cpp(306): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
 c:\users\fukuoka.shota\desktop\taso\win32project\source\object\mesh\meshfiled\mesh_field.cpp(307): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+  mesh_manager.cpp
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52937): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52946): note: 'DXGI_STATUS_CLIPPED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(14): warning C4005: 'DXGI_STATUS_NO_REDIRECTION': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52955): note: 'DXGI_STATUS_NO_REDIRECTION' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(15): warning C4005: 'DXGI_STATUS_NO_DESKTOP_ACCESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52964): note: 'DXGI_STATUS_NO_DESKTOP_ACCESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(16): warning C4005: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52973): note: 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(17): warning C4005: 'DXGI_STATUS_MODE_CHANGED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52982): note: 'DXGI_STATUS_MODE_CHANGED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(18): warning C4005: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52991): note: 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(21): warning C4005: 'DXGI_ERROR_INVALID_CALL': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53006): note: 'DXGI_ERROR_INVALID_CALL' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(22): warning C4005: 'DXGI_ERROR_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53015): note: 'DXGI_ERROR_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(23): warning C4005: 'DXGI_ERROR_MORE_DATA': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53024): note: 'DXGI_ERROR_MORE_DATA' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(24): warning C4005: 'DXGI_ERROR_UNSUPPORTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53033): note: 'DXGI_ERROR_UNSUPPORTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(25): warning C4005: 'DXGI_ERROR_DEVICE_REMOVED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53042): note: 'DXGI_ERROR_DEVICE_REMOVED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(26): warning C4005: 'DXGI_ERROR_DEVICE_HUNG': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53051): note: 'DXGI_ERROR_DEVICE_HUNG' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(27): warning C4005: 'DXGI_ERROR_DEVICE_RESET': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53061): note: 'DXGI_ERROR_DEVICE_RESET' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(28): warning C4005: 'DXGI_ERROR_WAS_STILL_DRAWING': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53070): note: 'DXGI_ERROR_WAS_STILL_DRAWING' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(29): warning C4005: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53080): note: 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(30): warning C4005: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53089): note: 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(31): warning C4005: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53099): note: 'DXGI_ERROR_DRIVER_INTERNAL_ERROR' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(32): warning C4005: 'DXGI_ERROR_NONEXCLUSIVE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53108): note: 'DXGI_ERROR_NONEXCLUSIVE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(33): warning C4005: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53117): note: 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(34): warning C4005: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53127): note: 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(35): warning C4005: 'DXGI_ERROR_REMOTE_OUTOFMEMORY': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53136): note: 'DXGI_ERROR_REMOTE_OUTOFMEMORY' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(917): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53400): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(918): warning C4005: 'D3D11_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53409): note: 'D3D11_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(919): warning C4005: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53419): note: 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d11.h(920): warning C4005: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53428): note: 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): warning C4005: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53376): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53385): note: 'D3D10_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2662): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2663): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2664): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2665): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2666): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2667): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2668): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2689): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2690): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2691): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2694): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2695): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2698): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2702): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2712): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2713): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2715): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2716): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2717): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2727): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2728): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2729): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2730): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2731): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2732): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2742): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2743): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2754): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(2254): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(4523): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(4577): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(4639): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(4707): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(4770): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(4832): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathvector.inl(1269): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(518): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(519): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
   mesh.cpp
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52937): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
@@ -1222,6 +1191,12 @@ c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathvector.inl(1269): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(518): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(519): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\users\fukuoka.shota\desktop\taso\win32project\source\object\character\player\player.cpp(407): warning C4316: '_XMMATRIX': ヒープで割り当てられたオブジェクトが 16 にアラインメントされていない可能性があります
+c:\users\fukuoka.shota\desktop\taso\win32project\source\object\character\player\player.cpp(357): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(207): note: 'fopen' の宣言を確認してください
+c:\users\fukuoka.shota\desktop\taso\win32project\source\object\character\player\player.cpp(480): warning C4316: '_XMMATRIX': ヒープで割り当てられたオブジェクトが 16 にアラインメントされていない可能性があります
+c:\users\fukuoka.shota\desktop\taso\win32project\source\object\character\player\player.cpp(432): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(207): note: 'fopen' の宣言を確認してください
   character.cpp
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52937): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
@@ -1889,8 +1864,6 @@ c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathvector.i
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(518): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(519): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
 c:\users\fukuoka.shota\desktop\taso\win32project\source\object\camera\camera.cpp(32): warning C4316: 'AppRenderer::Constant': ヒープで割り当てられたオブジェクトが 16 にアラインメントされていない可能性があります
-  コードを生成中...
-  コンパイル中...
   model_manager.cpp
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52937): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
@@ -1986,6 +1959,8 @@ c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathvector.inl(1269): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(518): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(519): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+  コードを生成中...
+  コンパイル中...
   model.cpp
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52937): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
@@ -2081,231 +2056,34 @@ c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathvector.inl(1269): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(518): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(519): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(201): warning C4316: '_XMMATRIX': ヒープで割り当てられたオブジェクトが 16 にアラインメントされていない可能性があります
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(91): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(207): note: 'fopen' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(95): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(99): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(102): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(104): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(107): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(110): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(113): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(116): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(119): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(120): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(128): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(129): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(130): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(131): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(132): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(133): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(136): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(137): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(138): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(139): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(140): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(141): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(142): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(143): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(146): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(147): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(148): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(149): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(150): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(151): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(152): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(153): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(156): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(157): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(158): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(159): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(160): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(161): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(162): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(163): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(166): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(167): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(174): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(175): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(176): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(177): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(178): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(179): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(182): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(183): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(184): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(185): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(188): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(189): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(192): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(193): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(205): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(206): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(207): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(208): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(209): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(210): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(211): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(212): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(214): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(215): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(216): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(217): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(218): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(219): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(220): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(221): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(223): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(224): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(225): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(226): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(227): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(228): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(229): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(230): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(232): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(233): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(234): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(235): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(236): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(237): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(238): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(239): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(245): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(246): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(247): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(248): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(249): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(250): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(252): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(253): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(254): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(255): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(256): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(257): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(259): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(260): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(261): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(262): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(263): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(264): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(266): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(273): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
-c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(274): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(1195): note: 'fscanf' の宣言を確認してください
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(164): warning C4244: '=': 'fbxsdk::FbxLongLong' から 'int' への変換です。データが失われる可能性があります。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(167): warning C4244: '=': 'fbxsdk::FbxLongLong' から 'int' への変換です。データが失われる可能性があります。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(189): warning C4244: '=': 'fbxsdk::FbxDouble' から 'float' への変換です。データが失われる可能性があります。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(190): warning C4244: '=': 'fbxsdk::FbxDouble' から 'float' への変換です。データが失われる可能性があります。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(191): warning C4244: '=': 'fbxsdk::FbxDouble' から 'float' への変換です。データが失われる可能性があります。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(192): warning C4244: '=': 'fbxsdk::FbxDouble' から 'float' への変換です。データが失われる可能性があります。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(248): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(497): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(505): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(512): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(519): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(541): warning C4316: '_XMMATRIX': ヒープで割り当てられたオブジェクトが 16 にアラインメントされていない可能性があります
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(571): warning C4244: '=': 'fbxsdk::FbxDouble' から 'float' への変換です。データが失われる可能性があります。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(572): warning C4244: '=': 'fbxsdk::FbxDouble' から 'float' への変換です。データが失われる可能性があります。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(573): warning C4244: '=': 'fbxsdk::FbxDouble' から 'float' への変換です。データが失われる可能性があります。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(575): warning C4244: '=': 'fbxsdk::FbxDouble' から 'float' への変換です。データが失われる可能性があります。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(576): warning C4244: '=': 'fbxsdk::FbxDouble' から 'float' への変換です。データが失われる可能性があります。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(577): warning C4244: '=': 'fbxsdk::FbxDouble' から 'float' への変換です。データが失われる可能性があります。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(579): warning C4244: '=': 'fbxsdk::FbxDouble' から 'float' への変換です。データが失われる可能性があります。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(580): warning C4244: '=': 'fbxsdk::FbxDouble' から 'float' への変換です。データが失われる可能性があります。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(581): warning C4244: '=': 'fbxsdk::FbxDouble' から 'float' への変換です。データが失われる可能性があります。
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(205): warning C4996: 'fbxsdk::FbxProperty::GetSrcObjectCount': が古い形式として宣言されました。
+  c:\program files\autodesk\fbx\fbx sdk\2016.1.2\include\fbxsdk\core\fbxproperty.h(727): note: 'fbxsdk::FbxProperty::GetSrcObjectCount' の宣言を確認してください
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(210): warning C4996: 'fbxsdk::FbxProperty::GetSrcObjectCount': が古い形式として宣言されました。
+  c:\program files\autodesk\fbx\fbx sdk\2016.1.2\include\fbxsdk\core\fbxproperty.h(727): note: 'fbxsdk::FbxProperty::GetSrcObjectCount' の宣言を確認してください
+c:\users\fukuoka.shota\desktop\taso\win32project\source\model\model.cpp(216): warning C4996: 'fbxsdk::FbxProperty::GetSrcObject': が古い形式として宣言されました。
+  c:\program files\autodesk\fbx\fbx sdk\2016.1.2\include\fbxsdk\core\fbxproperty.h(747): note: 'fbxsdk::FbxProperty::GetSrcObject' の宣言を確認してください
   main.cpp
-  vector.cpp
-c:\users\fukuoka.shota\desktop\taso\win32project\source\lib\vector.cpp(332): warning C4244: '初期化中': 'double' から 'float' への変換です。データが失われる可能性があります。
-  imgui_impl_dx11.cpp
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52937): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(13): warning C4005: 'DXGI_STATUS_CLIPPED': マクロが再定義されました。
@@ -2362,9 +2140,44 @@ c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(608): w
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53376): note: 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS' の以前の定義を確認してください
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\d3d10.h(609): warning C4005: 'D3D10_ERROR_FILE_NOT_FOUND': マクロが再定義されました。
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(53385): note: 'D3D10_ERROR_FILE_NOT_FOUND' の以前の定義を確認してください
-  imgui_draw.cpp
-  imgui_demo.cpp
-  imgui.cpp
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2662): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2663): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2664): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2665): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2666): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2667): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2668): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2689): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2690): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2691): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2694): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2695): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2698): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2702): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2712): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2713): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2715): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2716): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2717): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2727): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2728): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2729): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2730): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2731): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2732): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2742): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2743): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamath.h(2754): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(2254): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(4523): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(4577): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(4639): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(4707): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(4770): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.inl(4832): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathvector.inl(1269): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(518): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
+c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(519): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
   input.cpp
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\dxgitype.h(12): warning C4005: 'DXGI_STATUS_OCCLUDED': マクロが再定義されました。
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\winerror.h(52937): note: 'DXGI_STATUS_OCCLUDED' の以前の定義を確認してください
@@ -2555,8 +2368,8 @@ c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathconvert.
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathvector.inl(1269): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(518): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
 c:\program files (x86)\microsoft directx sdk (june 2010)\include\xnamathmisc.inl(519): warning C4838: 'unsigned int' から 'INT' への変換には縮小変換が必要です
-c:\users\fukuoka.shota\desktop\taso\win32project\source\app\app.cpp(77): warning C4316: 'MainCamera': ヒープで割り当てられたオブジェクトが 16 にアラインメントされていない可能性があります
-c:\users\fukuoka.shota\desktop\taso\win32project\source\app\app.cpp(80): warning C4316: 'LightCamera': ヒープで割り当てられたオブジェクトが 16 にアラインメントされていない可能性があります
+c:\users\fukuoka.shota\desktop\taso\win32project\source\app\app.cpp(81): warning C4316: 'MainCamera': ヒープで割り当てられたオブジェクトが 16 にアラインメントされていない可能性があります
+c:\users\fukuoka.shota\desktop\taso\win32project\source\app\app.cpp(84): warning C4316: 'LightCamera': ヒープで割り当てられたオブジェクトが 16 にアラインメントされていない可能性があります
   コードを生成中...
   Win32Project.vcxproj -> C:\Users\fukuoka.shota\Desktop\taso\Debug\Win32Project.exe
   Win32Project.vcxproj -> C:\Users\fukuoka.shota\Desktop\taso\Debug\Win32Project.pdb (Partial PDB)

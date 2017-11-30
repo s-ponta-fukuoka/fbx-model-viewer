@@ -294,11 +294,14 @@ void SkinMeshModel::LoadFile(const  char* FilenName)
 			FbxVector4 *src = mesh->GetControlPoints();//頂点座標配列
 
 			m_pMesh[meshCnt].pPosition = new VECTOR3[m_pMesh[meshCnt].nNumVertex];
+			m_pMesh[meshCnt].pBoneIndex = new VECTOR4[m_pMesh[meshCnt].nNumVertex];
+			m_pMesh[meshCnt].pWeight = new VECTOR4[m_pMesh[meshCnt].nNumVertex];
 			for (int i = 0; i < 4; i++)
 			{
 				m_pMesh[meshCnt].boneIndex[i] = new int[m_pMesh[meshCnt].nNumVertex];
 				m_pMesh[meshCnt].weight[i] = new float[m_pMesh[meshCnt].nNumVertex];
 			}
+
 			for (int i = 0; i < m_pMesh[meshCnt].nNumVertex; i++)
 			{
 				m_pMesh[meshCnt].pPosition[i].x = (float)src[i][0];
@@ -489,11 +492,18 @@ void SkinMeshModel::LoadFile(const  char* FilenName)
 						if (BoneCnt[m_pMesh[meshCnt].pCluster[boneCnt].Index[indexCnt]] < 4)
 						{
 							m_pMesh[meshCnt].weight[BoneCnt[m_pMesh[meshCnt].pCluster[boneCnt].Index[indexCnt]]][m_pMesh[meshCnt].pCluster[boneCnt].Index[indexCnt]] = (float)weightAry[indexCnt];
-
+						
 							m_pMesh[meshCnt].boneIndex[BoneCnt[m_pMesh[meshCnt].pCluster[boneCnt].Index[indexCnt]]][m_pMesh[meshCnt].pCluster[boneCnt].Index[indexCnt]] = boneCnt;
-
+						
 							bUse[BoneCnt[m_pMesh[meshCnt].pCluster[boneCnt].Index[indexCnt]]][m_pMesh[meshCnt].pCluster[boneCnt].Index[indexCnt]] = true;
 						}
+					}
+
+				
+					for (int j = 0; j < m_pMesh[meshCnt].nNumVertex; j++)
+					{
+						m_pMesh[meshCnt].pBoneIndex[j] = VECTOR4(m_pMesh[meshCnt].boneIndex[0][j], m_pMesh[meshCnt].boneIndex[1][j], m_pMesh[meshCnt].boneIndex[2][j], m_pMesh[meshCnt].boneIndex[3][j]);
+						m_pMesh[meshCnt].pWeight[j] = VECTOR4(m_pMesh[meshCnt].weight[0][j], m_pMesh[meshCnt].weight[1][j], m_pMesh[meshCnt].weight[2][j], m_pMesh[meshCnt].weight[3][j]);
 					}
 
 					m_pMesh[meshCnt].pCluster[boneCnt].pMatrix = new XMMATRIX*[m_nNumAnime];
@@ -513,7 +523,6 @@ void SkinMeshModel::LoadFile(const  char* FilenName)
 						XMVECTOR Determinant;
 						XMMATRIX init = XMMatrixInverse(&Determinant, SetMatrix(initMat));
 						XMMATRIX mat = SetMatrix(Mat);
-						//XMMATRIX init = SetMatrix(initMat);
 
 						//クラスターからノード取得
 						FbxNode* node = cluster->GetLink();

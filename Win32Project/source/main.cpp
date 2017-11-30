@@ -179,7 +179,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 			if (GetOpenFileName(&of))
 			{
 				Player* pPlayer = Player::GetInstance();
-				pPlayer->LoadFile(g_FileName);
 			}
 			InvalidateRect(hWnd, NULL, FALSE);
 			break;

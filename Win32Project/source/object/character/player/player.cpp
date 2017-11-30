@@ -40,7 +40,9 @@ Player::Player(RenderManager* pRenderManager,
 	m_pModel = new SkinMeshModel("resource/model/naka.fbx");
 	m_pModel = pModelManager->SeekSkinMeshModel(m_pModel);
 
-	SkinMeshModel::Mesh* pMesh = m_pModel->GetMesh();
+	m_pSaveMesh = new SaveMesh[m_pModel->GetNumMesh()];
+
+	m_pMesh = m_pModel->GetMesh();
 
 	m_pFrame = new int();
 
@@ -53,14 +55,14 @@ Player::Player(RenderManager* pRenderManager,
 	for (int i = 0; i < m_pModel->GetNumMesh(); i++)
 	{
 
-		MakeVertex(i, pMesh);
+		MakeVertex(i, m_pMesh);
 
 		ID3D11ShaderResourceView* pTextureResource = NULL;
 
-		if (pMesh[i].pFileName != NULL)
+		if (m_pMesh[i].pFileName != NULL)
 		{
 			ePsType = PixelShader::PS_TOON;
-			Texture* pTexture = new Texture(pMesh[i].pFileName, pTextureManager);
+			Texture* pTexture = new Texture(m_pMesh[i].pFileName, pTextureManager);
 			pTextureResource = pTexture->GetTexture();
 		}
 		else
@@ -76,14 +78,14 @@ Player::Player(RenderManager* pRenderManager,
 			m_pTransform,
 			pConstant,
 			pLightCameraConstant,
-			pMesh[i].nNumPolygonVertex,
+			m_pMesh[i].nNumPolygonVertex,
 			m_pFrame,
 			m_pAnimeNumber,
 			D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST,
 			VertexShader::VS_TOON,
 			ePsType,
-			pMesh[i].pCluster,
-			pMesh[i]));
+			m_pMesh[i].pCluster,
+			m_pMesh[i]));
 
 		pRenderManager->AddShadowRenderer(new SkinnedMeshRenderer(m_pVertexBuffer,
 			m_pIndexBuffer,
@@ -93,14 +95,14 @@ Player::Player(RenderManager* pRenderManager,
 			m_pTransform,
 			pLightCameraConstant,
 			NULL,
-			pMesh[i].nNumPolygonVertex,
+			m_pMesh[i].nNumPolygonVertex,
 			m_pFrame,
 			m_pAnimeNumber,
 			D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST,
 			VertexShader::VS_TOON,
 			ePsType = PixelShader::PS_SHADOW,
-			pMesh[i].pCluster,
-			pMesh[i]));
+			m_pMesh[i].pCluster,
+			m_pMesh[i]));
 	}
 
 	m_pAnimeClip[0].nStartTime = m_pModel->GetAnime()->nStartTime;
@@ -291,14 +293,23 @@ void Player::MakeVertex(int nMeshCount, SkinMeshModel::Mesh* pMesh)
 	AppRenderer* pAppRenderer = AppRenderer::GetInstance();
 	ID3D11Device* pDevice = pAppRenderer->GetDevice();
 
+	m_pSaveMesh[nMeshCount].nNumVertex = pMesh[nMeshCount].nNumVertex;
+	m_pSaveMesh[nMeshCount].nNumCluster = pMesh[nMeshCount].nNumCluster;
+	m_pSaveMesh[nMeshCount].nNumPolygonVertex = pMesh[nMeshCount].nNumPolygonVertex;
+
 	//四角形
 	SkinMeshModel::ModelVertex* vertices = new SkinMeshModel::ModelVertex[pMesh[nMeshCount].nNumVertex];
 	for (int j = 0; j < pMesh[nMeshCount].nNumVertex; j++)
 	{
 		vertices[j].position = VECTOR3(pMesh[nMeshCount].pPosition[j].x, pMesh[nMeshCount].pPosition[j].y, pMesh[nMeshCount].pPosition[j].z);
 		vertices[j].color = VECTOR4(pMesh[nMeshCount].color.x, pMesh[nMeshCount].color.y, pMesh[nMeshCount].color.z, pMesh[nMeshCount].color.w);
-		vertices[j].boneIndex = VECTOR4(pMesh[nMeshCount].boneIndex[0][j], pMesh[nMeshCount].boneIndex[1][j], pMesh[nMeshCount].boneIndex[2][j], pMesh[nMeshCount].boneIndex[3][j]);
-		vertices[j].weight = VECTOR4(pMesh[nMeshCount].weight[0][j], pMesh[nMeshCount].weight[1][j], pMesh[nMeshCount].weight[2][j], pMesh[nMeshCount].weight[3][j]);
+		vertices[j].boneIndex = pMesh[nMeshCount].pBoneIndex[j];
+		vertices[j].weight = pMesh[nMeshCount].pWeight[j];
+
+		m_pSaveMesh[nMeshCount].position[j] = VECTOR3(pMesh[nMeshCount].pPosition[j].x, pMesh[nMeshCount].pPosition[j].y, pMesh[nMeshCount].pPosition[j].z);
+		m_pSaveMesh[nMeshCount].color = VECTOR4(pMesh[nMeshCount].color.x, pMesh[nMeshCount].color.y, pMesh[nMeshCount].color.z, pMesh[nMeshCount].color.w);
+		m_pSaveMesh[nMeshCount].boneIndex[j] = pMesh[nMeshCount].pBoneIndex[j];
+		m_pSaveMesh[nMeshCount].weight[j] = pMesh[nMeshCount].pWeight[j];
 	}
 
 	WORD* hIndexData = new WORD[pMesh[nMeshCount].nNumPolygonVertex];
@@ -308,6 +319,36 @@ void Player::MakeVertex(int nMeshCount, SkinMeshModel::Mesh* pMesh)
 		vertices[pMesh[nMeshCount].pIndexNumber[j]].normal = VECTOR3(pMesh[nMeshCount].pNormal[j].x, pMesh[nMeshCount].pNormal[j].y, pMesh[nMeshCount].pNormal[j].z);
 		vertices[pMesh[nMeshCount].pIndexNumber[j]].tex = VECTOR2(pMesh[nMeshCount].pTex[j].x, 1 - pMesh[nMeshCount].pTex[j].y);
 		hIndexData[j] = pMesh[nMeshCount].pIndexNumber[j];
+
+		m_pSaveMesh[nMeshCount].normal[j] = pMesh[nMeshCount].pNormal[j];
+		m_pSaveMesh[nMeshCount].tex[j] = pMesh[nMeshCount].pTex[j];
+		m_pSaveMesh[nMeshCount].IndexNumber[j] = pMesh[nMeshCount].pIndexNumber[j];
+	}
+
+	m_pSaveMesh[nMeshCount].cluster = new SaveCluster[pMesh[nMeshCount].nNumCluster];
+
+	for (int j = 0; j < pMesh[nMeshCount].nNumCluster; j++)
+	{
+		for (int k = 0; k < m_pModel->GetNumAnime(); k++)
+		{
+			for (int l = 0; l < m_pModel->GetAnime()->nEndTime; l++)
+			{
+				m_pSaveMesh[nMeshCount].cluster[j].pMatrix[k][l] = pMesh[nMeshCount].pCluster[j].pMatrix[k][l];
+			}
+		}
+	}
+
+	m_pSaveMesh[nMeshCount].LclPos = pMesh[nMeshCount].LclPos;
+	m_pSaveMesh[nMeshCount].LclRot = pMesh[nMeshCount].LclRot;
+	m_pSaveMesh[nMeshCount].LclScl = pMesh[nMeshCount].LclScl;
+
+
+	if (pMesh[nMeshCount].pFileName != NULL)
+	{
+		for (int i = 0; i < strlen(pMesh[nMeshCount].pFileName); i++)
+		{
+			m_pSaveMesh[nMeshCount].FileName[i] = (char)pMesh[nMeshCount].pFileName[i];
+		}
 	}
 
 	D3D11_BUFFER_DESC bd;
@@ -342,158 +383,224 @@ void Player::MakeVertex(int nMeshCount, SkinMeshModel::Mesh* pMesh)
 	delete[] vertices;
 
 	delete[] hIndexData;
-
-	delete[] pMesh[nMeshCount].pPosition;
-	delete[] pMesh[nMeshCount].pNormal;
-	delete[] pMesh[nMeshCount].pTex;
-	delete[] pMesh[nMeshCount].pWeight;
-	delete[] pMesh[nMeshCount].pBoneIndex;
 }
 
 void Player::SaveFile(char* FileName)
 {
 	FILE* pFile;
 	
-	pFile = fopen(FileName, "wb");
+	rewind(stdin);
+	pFile = fopen(FileName, "w");
 
 	int nNumClip = m_nNumClip - 1;
 
-	fwrite(&nNumClip, sizeof(int), 1, pFile);
-
-	for (int i = 1; i < m_nNumClip; i++)
+	fprintf(pFile, "%d\n", nNumClip);//アニメーション数
+	for (int i = nNumClip-1; i > -1; i--)
 	{
-		fwrite(&m_pAnimeClip[i].nStartTime, sizeof(m_pAnimeClip[i].nStartTime), 1, pFile);
-		fwrite(&m_pAnimeClip[i].nEndTime, sizeof(m_pAnimeClip[i].nEndTime), 1, pFile);
+		//スタート
+		fprintf(pFile, "%d:", m_pAnimeClip[i].nStartTime);
+
+		//エンド
+		fprintf(pFile, "%d\n", m_pAnimeClip[i].nEndTime);
 	}
 
+	//メッシュの数
 	int nNumMesh = m_pModel->GetNumMesh();
-	fwrite(&nNumMesh, sizeof(nNumMesh), 1, pFile);
-
-	SkinMeshModel::Mesh* pMesh = m_pModel->GetMesh();
-
+	fprintf(pFile, "\n%d\n\n", nNumMesh);
 	for (int i = 0; i < nNumMesh; i++)
 	{
-		fwrite(&pMesh[i].nNumVertex, sizeof(pMesh[i].nNumVertex), 1, pFile);
-
-		for (int j = 0; j < pMesh[i].nNumVertex; j++)
+		fprintf(pFile, "%d\n", m_pMesh[i].nNumVertex);//ポリゴン数
+		for (int j = 0; j < m_pMesh[i].nNumVertex; j++)
 		{
-			fwrite(&pMesh[i].pPosition[j], sizeof(pMesh[i].pPosition[j]), 1, pFile);
+			//座標
+			fprintf(pFile, "%f:", m_pMesh[i].pPosition[j].x);
+			fprintf(pFile, "%f:", m_pMesh[i].pPosition[j].y);
+			fprintf(pFile, "%f\n", m_pMesh[i].pPosition[j].z);
 
-			fwrite(&pMesh[i].color, sizeof(pMesh[i].color), 1, pFile);
+			//色
+			fprintf(pFile, "%f:", m_pMesh[i].color.x);
+			fprintf(pFile, "%f:", m_pMesh[i].color.y);
+			fprintf(pFile, "%f:", m_pMesh[i].color.z);
+			fprintf(pFile, "%f\n", m_pMesh[i].color.w);
+
+			//クラスターインデックス
+			fprintf(pFile, "%d:", m_pMesh[i].boneIndex[0][j]);
+			fprintf(pFile, "%d:", m_pMesh[i].boneIndex[1][j]);
+			fprintf(pFile, "%d:", m_pMesh[i].boneIndex[2][j]);
+			fprintf(pFile, "%d\n", m_pMesh[i].boneIndex[3][j]);
+
+			//ウェイト
+			fprintf(pFile, "%f:", m_pMesh[i].weight[0][j]);
+			fprintf(pFile, "%f:", m_pMesh[i].weight[1][j]);
+			fprintf(pFile, "%f:", m_pMesh[i].weight[2][j]);
+			fprintf(pFile, "%f\n", m_pMesh[i].weight[3][j]);
 		}
 
-		fwrite(&pMesh[i].nNumPolygonVertex, sizeof(pMesh[i].nNumPolygonVertex), 1, pFile);
-
-		for (int j = 0; j < pMesh[i].nNumPolygonVertex; j++)
+		fprintf(pFile, "%d\n", m_pMesh[i].nNumPolygonVertex);//頂点数
+		for (int j = 0; j < m_pMesh[i].nNumPolygonVertex; j++)
 		{
-			fwrite(&pMesh[i].pNormal[j], sizeof(pMesh[i].pNormal[j]), 1, pFile);
+			//法線
+			fprintf(pFile, "%f:", m_pMesh[i].pNormal[j].x);
+			fprintf(pFile, "%f:", m_pMesh[i].pNormal[j].y);
+			fprintf(pFile, "%f\n", m_pMesh[i].pNormal[j].z);
 
-			fwrite(&pMesh[i].pTex[j], sizeof(pMesh[i].pTex[j]), 1, pFile);
+			//UV
+			fprintf(pFile, "%f:", m_pMesh[i].pTex[j].x);
+			fprintf(pFile, "%f\n", m_pMesh[i].pTex[j].y);
 
-			fwrite(&pMesh[i].pIndexNumber[j], sizeof(pMesh[i].pIndexNumber[j]), 1, pFile);
+			//インデックスナンバー
+			fprintf(pFile, "%d\n", m_pMesh[i].pIndexNumber[j]);
 		}
 
-		fwrite(&pMesh[i].nNumCluster, sizeof(pMesh[i].nNumCluster), 1, pFile);
+
+		fprintf(pFile, "%d\n", m_pMesh[i].nNumCluster);//クラスタ数
 
 		SkinMeshModel::Cluster* pCluster;
+		
+		pCluster = new SkinMeshModel::Cluster[m_pMesh[i].nNumCluster];
+	
 
-		pCluster = new SkinMeshModel::Cluster[pMesh[i].nNumCluster];
-
-		for (int j = 0; j < pMesh[i].nNumCluster; j++)
+		for (int j = 0; j < m_pSaveMesh[i].nNumCluster; j++)
 		{
-			pCluster[j].pMatrix = new XMMATRIX*[m_nNumClip - 1];
-			for (int k = 0; k < m_nNumClip-1; k++)
+			pCluster[j].pMatrix = new XMMATRIX*[nNumClip];
+			for (int k = nNumClip -1; k > -1 ; k--)
 			{
-				pCluster[j].pMatrix[k] = new XMMATRIX[m_pAnimeClip[k+1].nEndTime];
-
-				for (int l = m_pAnimeClip[k+1].nStartTime; l < m_pAnimeClip[k+1].nEndTime; l++)
+				pCluster[j].pMatrix[k] = new XMMATRIX[m_pAnimeClip[k].nEndTime];
+				for (int l = m_pAnimeClip[k].nStartTime; l < m_pAnimeClip[k].nEndTime; l++)
 				{
-					pCluster[j].pMatrix[k][l] = pMesh[i].pCluster[j].pMatrix[0][l];
+					pCluster[j].pMatrix[k][l] = m_pMesh[i].pCluster[j].pMatrix[0][l];
 
-					fwrite(&pCluster[j].pMatrix[k][l], sizeof(pCluster[j].pMatrix[k][l]), 1, pFile);
+					//クラスター行列
+					fprintf(pFile, "%f:", pCluster[j].pMatrix[k][l]._11);
+					fprintf(pFile, "%f:", pCluster[j].pMatrix[k][l]._12);
+					fprintf(pFile, "%f:", pCluster[j].pMatrix[k][l]._13);
+					fprintf(pFile, "%f\n", pCluster[j].pMatrix[k][l]._14);
+
+					fprintf(pFile, "%f:", pCluster[j].pMatrix[k][l]._21);
+					fprintf(pFile, "%f:", pCluster[j].pMatrix[k][l]._22);
+					fprintf(pFile, "%f:", pCluster[j].pMatrix[k][l]._23);
+					fprintf(pFile, "%f\n", pCluster[j].pMatrix[k][l]._24);
+
+					fprintf(pFile, "%f:", pCluster[j].pMatrix[k][l]._31);
+					fprintf(pFile, "%f:", pCluster[j].pMatrix[k][l]._32);
+					fprintf(pFile, "%f:", pCluster[j].pMatrix[k][l]._33);
+					fprintf(pFile, "%f\n", pCluster[j].pMatrix[k][l]._34);
+
+					fprintf(pFile, "%f:", pCluster[j].pMatrix[k][l]._41);
+					fprintf(pFile, "%f:", pCluster[j].pMatrix[k][l]._42);
+					fprintf(pFile, "%f:", pCluster[j].pMatrix[k][l]._43);
+					fprintf(pFile, "%f\n", pCluster[j].pMatrix[k][l]._44);
 				}
 			}
 		}
 
-		fwrite(&pMesh[i].LclPos, sizeof(pMesh[i].LclPos), 1, pFile);
-		fwrite(&pMesh[i].LclRot, sizeof(pMesh[i].LclRot), 1, pFile);
-		fwrite(&pMesh[i].LclScl, sizeof(pMesh[i].LclScl), 1, pFile);
+		//変換行列
+		fprintf(pFile, "%f:", m_pMesh[i].LclPos.x);
+		fprintf(pFile, "%f:", m_pMesh[i].LclPos.y);
+		fprintf(pFile, "%f\n", m_pMesh[i].LclPos.z);
 
-		fwrite(&pMesh[i].pFileName, sizeof(pMesh[i].pFileName), 1, pFile);
+		fprintf(pFile, "%f:", m_pMesh[i].LclRot.x);
+		fprintf(pFile, "%f:", m_pMesh[i].LclRot.y);
+		fprintf(pFile, "%f\n", m_pMesh[i].LclRot.z);
+
+		fprintf(pFile, "%f:", m_pMesh[i].LclScl.x);
+		fprintf(pFile, "%f:", m_pMesh[i].LclScl.y);
+		fprintf(pFile, "%f\n", m_pMesh[i].LclScl.z);
+
+		fprintf(pFile, "\n");
 	}
-
-	fclose(pFile);
-}
-
-void Player::LoadFile(char* FileName)
-{
-	FILE* pFile;
-
-	pFile = fopen(FileName, "rb");
-
-	fread(&m_nNumClip - 1, sizeof(m_nNumClip - 1), 1, pFile);
-
-	for (int i = 1; i < m_nNumClip; i++)
-	{
-		fread(&m_pAnimeClip[i].nStartTime, sizeof(m_pAnimeClip[i].nStartTime), 1, pFile);
-		fread(&m_pAnimeClip[i].nEndTime, sizeof(m_pAnimeClip[i].nEndTime), 1, pFile);
-	}
-
-	int nNumMesh = m_pModel->GetNumMesh();
-	fread(&nNumMesh, sizeof(m_pModel->GetNumMesh()), 1, pFile);
-
-	SkinMeshModel::Mesh* pMesh = m_pModel->GetMesh();
 
 	for (int i = 0; i < nNumMesh; i++)
 	{
-		fread(&pMesh[i].nNumVertex, sizeof(pMesh[i].nNumVertex), 1, pFile);
-
-		for (int j = 0; j < pMesh[i].nNumVertex; j++)
-		{
-			fread(&pMesh[i].pPosition[j], sizeof(pMesh[i].pPosition[j]), 1, pFile);
-
-			fread(&pMesh[i].color, sizeof(pMesh[i].color), 1, pFile);
-		}
-
-		fread(&pMesh[i].nNumPolygonVertex, sizeof(pMesh[i].nNumPolygonVertex), 1, pFile);
-
-		for (int j = 0; j < pMesh[i].nNumPolygonVertex; j++)
-		{
-			fread(&pMesh[i].pNormal[j], sizeof(pMesh[i].pNormal[j]), 1, pFile);
-
-			fread(&pMesh[i].pTex[j], sizeof(pMesh[i].pTex[j]), 1, pFile);
-
-			fread(&pMesh[i].pIndexNumber[j], sizeof(pMesh[i].pIndexNumber[j]), 1, pFile);
-		}
-
-		fread(&pMesh[i].nNumCluster, sizeof(pMesh[i].nNumCluster), 1, pFile);
-
-		SkinMeshModel::Cluster* pCluster;
-
-		pCluster = new SkinMeshModel::Cluster[pMesh[i].nNumCluster];
-
-		for (int j = 0; j < pMesh[i].nNumCluster; j++)
-		{
-			pCluster[j].pMatrix = new XMMATRIX*[m_nNumClip - 1];
-			for (int k = 0; k < m_nNumClip - 1; k++)
-			{
-				pCluster[j].pMatrix[k] = new XMMATRIX[m_pAnimeClip[k + 1].nEndTime];
-
-				for (int l = m_pAnimeClip[k + 1].nStartTime; l < m_pAnimeClip[k + 1].nEndTime; l++)
-				{
-					pCluster[j].pMatrix[k][l] = pMesh[i].pCluster[j].pMatrix[0][l];
-
-					fread(&pCluster[j].pMatrix[k][l], sizeof(pCluster[j].pMatrix[k][l]), 1, pFile);
-				}
-			}
-		}
-
-		fread(&pMesh[i].LclPos, sizeof(pMesh[i].LclPos), 1, pFile);
-		fread(&pMesh[i].LclRot, sizeof(pMesh[i].LclRot), 1, pFile);
-		fread(&pMesh[i].LclScl, sizeof(pMesh[i].LclScl), 1, pFile);
-
-		fread(&pMesh[i].pFileName, sizeof(pMesh[i].pFileName), 1, pFile);
+		//ファイル名
+		fprintf(pFile, "%s\n", m_pMesh[i].pFileName);
 	}
 
 	fclose(pFile);
+
+	//pFile = fopen(FileName, "wb");
+	//
+	//m_pSaveMesh;
+	//
+	//int nNumClip = m_nNumClip - 1;
+	//
+	//fwrite(&nNumClip, sizeof(int), 1, pFile);
+	//
+	//for (int i = 1; i < m_nNumClip; i++)
+	//{
+	//	fwrite(&m_pAnimeClip[i].nStartTime, sizeof(int), 1, pFile);
+	//	fwrite(&m_pAnimeClip[i].nEndTime, sizeof(int), 1, pFile);
+	//}
+	//
+	//int nNumMesh = m_pModel->GetNumMesh();
+	//fwrite(&nNumMesh, sizeof(int), 1, pFile);
+	//
+	//for (int i = nNumMesh-1; i < nNumMesh; i++)
+	//{
+	//	fwrite(&m_pSaveMesh[i].nNumVertex, sizeof(int), 1, pFile);
+	//
+	//	for (int j = 0; j < m_pSaveMesh[i].nNumVertex; j++)
+	//	{
+	//		fwrite(&m_pSaveMesh[i].position[j], sizeof(VECTOR3), 1, pFile);
+	//
+	//		fwrite(&m_pSaveMesh[i].color, sizeof(VECTOR4), 1, pFile);
+	//
+	//		fwrite(&m_pSaveMesh[i].boneIndex[j], sizeof(VECTOR4), 1, pFile);
+	//
+	//		fwrite(&m_pSaveMesh[i].weight, sizeof(VECTOR4), 1, pFile);
+	//	}
+	//
+	//	fwrite(&m_pSaveMesh[i].nNumPolygonVertex, sizeof(int), 1, pFile);
+	//
+	//	for (int j = 0; j < m_pSaveMesh[i].nNumPolygonVertex; j++)
+	//	{
+	//		fwrite(&m_pSaveMesh[i].normal[j], sizeof(VECTOR3), 1, pFile);
+	//
+	//		fwrite(&m_pSaveMesh[i].tex[j], sizeof(VECTOR2), 1, pFile);
+	//
+	//		fwrite(&m_pSaveMesh[i].IndexNumber[j], sizeof(int), 1, pFile);
+	//	}
+	//
+	//	fwrite(&m_pSaveMesh[i].nNumCluster, sizeof(int), 1, pFile);
+	//
+	//	//SaveCluster* pCluster;
+	//
+	//	//pCluster = new SaveCluster[m_pMesh[i].nNumCluster];
+	//
+	//	for (int j = 0; j < m_pSaveMesh[i].nNumCluster; j++)
+	//	{
+	//		for (int k = 0; k < m_nNumClip; k++)
+	//		{
+	//
+	//			for (int l = m_pAnimeClip[k+1].nStartTime; l < m_pAnimeClip[k+1].nEndTime; l++)
+	//			{
+	//				//pCluster[j].pMatrix[k][l] = m_pSaveMesh[i].cluster[j].pMatrix[0][l];
+	//
+	//				fwrite(&m_pSaveMesh[i].cluster[j].pMatrix[0][l], sizeof(XMMATRIX), 1, pFile);
+	//			}
+	//		}
+	//	}
+	//
+	//	fwrite(&m_pSaveMesh[i].LclPos, sizeof(VECTOR3), 1, pFile);
+	//	fwrite(&m_pSaveMesh[i].LclRot, sizeof(VECTOR3), 1, pFile);
+	//	fwrite(&m_pSaveMesh[i].LclScl, sizeof(VECTOR3), 1, pFile);
+	//
+	//	//if (m_pMesh[i].pFileName == NULL)
+	//	//{
+	//	//	char* null = "NULL";
+	//	//	for (int j = 0; j < strlen(null); j++)
+	//	//	{
+	//	//		m_pSaveMesh[i].FileName[j] = (char)null[j];
+	//	//	}
+	//	//	m_pMesh[i].pFileName = "NULL";
+	//	//}
+	//	//
+	//	//int size = strlen(m_pMesh[i].pFileName);
+	//	//
+	//	//fwrite(&size, sizeof(int), 1, pFile);
+	//	//
+	//	//fwrite(&m_pSaveMesh[i].FileName, sizeof(char), size, pFile);
+	//}
+	//
+	//fclose(pFile);
 }
