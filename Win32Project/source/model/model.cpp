@@ -155,16 +155,16 @@ void SkinMeshModel::LoadFile(const  char* FilenName)
 	//------------------------------------
 	//アニメーション
 	//------------------------------------
-	for (int i = 0; i < m_nNumAnime; i++)
+	for (int j = 0; j < m_nNumAnime; j++)
 	{
 		//FbxtakeInfo取得
-		auto take_info = pScene->GetTakeInfo(*(animation_names[i]));
+		auto take_info = pScene->GetTakeInfo(*(animation_names[j]));
 
 		//開始時間
-		m_pAnime[i].nStartTime = take_info->mLocalTimeSpan.GetStart().Get() / FbxTime::GetOneFrameValue(FbxTime::eFrames24);
+		m_pAnime[j].nStartTime = take_info->mLocalTimeSpan.GetStart().Get() / FbxTime::GetOneFrameValue(FbxTime::eFrames24);
 
 		//終了時間
-		m_pAnime[i].nEndTime = take_info->mLocalTimeSpan.GetStop().Get() / FbxTime::GetOneFrameValue(FbxTime::eFrames24);
+		m_pAnime[j].nEndTime = take_info->mLocalTimeSpan.GetStop().Get() / FbxTime::GetOneFrameValue(FbxTime::eFrames24);
 	}
 
 	//------------------------------------
@@ -200,7 +200,7 @@ void SkinMeshModel::LoadFile(const  char* FilenName)
 
 		// ディフューズプロパティを検索
 		FbxProperty property = material->FindProperty(FbxSurfaceMaterial::sDiffuse);
-
+		m_pMesh[i].pFileName = NULL;
 		// プロパティが持っているレイヤードテクスチャの枚数をチェック
 		int layerNum = property.GetSrcObjectCount(FbxLayeredTexture::ClassId);
 		// レイヤードテクスチャが無ければ通常テクスチャ
@@ -276,6 +276,10 @@ void SkinMeshModel::LoadFile(const  char* FilenName)
 					}
 				}
 			}
+		}
+		else
+		{
+			m_pMaterial[i].pFileName = "NULL";
 		}
 	}
 

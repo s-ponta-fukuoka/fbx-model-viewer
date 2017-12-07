@@ -128,6 +128,8 @@ SkinnedMeshRenderer::SkinnedMeshRenderer(ID3D11Buffer* pVertexBuffer,
 	ConfigConstantBuffer(sizeof(SkinMeshModel::ModelConstant));
 
 	ConfigSamplerState();
+
+	ConfigBlendState();
 }
 
 CanvasRenderer::CanvasRenderer(ID3D11Buffer* pVertexBuffer,
@@ -256,6 +258,31 @@ void Renderer::ConfigSamplerState(void)
 }
 
 ///////////////////////////////////////////////////////////////////////////////
+//ブレンドステート設定
+///////////////////////////////////////////////////////////////////////////////
+void Renderer::ConfigBlendState(void)
+{
+	AppRenderer* pAppRenderer = AppRenderer::GetInstance();
+	ID3D11Device* pDevice = pAppRenderer->GetDevice();
+
+	D3D11_BLEND_DESC BlendStateDesc;
+	BlendStateDesc.AlphaToCoverageEnable = FALSE;
+	BlendStateDesc.IndependentBlendEnable = FALSE;
+	for (int i = 0; i < 8; i++)
+	{
+		BlendStateDesc.RenderTarget[i].BlendEnable = FALSE;
+		BlendStateDesc.RenderTarget[i].SrcBlend = D3D11_BLEND_SRC_ALPHA;
+		BlendStateDesc.RenderTarget[i].DestBlend = D3D11_BLEND_INV_SRC_ALPHA;
+		BlendStateDesc.RenderTarget[i].BlendOp = D3D11_BLEND_OP_ADD;
+		BlendStateDesc.RenderTarget[i].SrcBlendAlpha = D3D11_BLEND_ONE;
+		BlendStateDesc.RenderTarget[i].DestBlendAlpha = D3D11_BLEND_ZERO;
+		BlendStateDesc.RenderTarget[i].BlendOpAlpha = D3D11_BLEND_OP_ADD;
+		BlendStateDesc.RenderTarget[i].RenderTargetWriteMask = D3D11_COLOR_WRITE_ENABLE_ALL;
+	}
+	pDevice->CreateBlendState(&BlendStateDesc, &m_pBlendState);
+}
+
+///////////////////////////////////////////////////////////////////////////////
 // 描画
 ///////////////////////////////////////////////////////////////////////////////
 void MeshRenderer::Draw(void)
@@ -342,6 +369,15 @@ void SkinnedMeshRenderer::Draw()
 	AppRenderer* pAppRenderer = AppRenderer::GetInstance();
 	ID3D11Device* pDevice = pAppRenderer->GetDevice();
 	ID3D11DeviceContext* pDeviceContext = pAppRenderer->GetDeviceContex();
+
+	ID3D11RenderTargetView* pRenderTarget = pAppRenderer->GetRenderTargetView();
+	ID3D11DepthStencilView* pDepthStencil = pAppRenderer->GetDepthStencilView();
+
+	//pDeviceContext->OMSetRenderTargets(1, &pRenderTarget, NULL);
+
+	//ブレンディングをコンテキストに設定
+	float blendFactor[4] = { D3D11_BLEND_ZERO, D3D11_BLEND_ZERO, D3D11_BLEND_ZERO, D3D11_BLEND_ZERO };
+	pDeviceContext->OMSetBlendState(m_pBlendState, blendFactor, 0xffffffff);
 
 	//バーテックスバッファーをセット
 	UINT stride = sizeof(SkinMeshModel::ModelVertex);
@@ -436,6 +472,8 @@ void SkinnedMeshRenderer::Draw()
 	{
 		pDeviceContext->Draw(m_nNumVertexPolygon, 0);
 	}
+
+	pDeviceContext->OMSetRenderTargets(1, &pRenderTarget, pDepthStencil);
 }
 
 void CanvasRenderer::Draw(void)

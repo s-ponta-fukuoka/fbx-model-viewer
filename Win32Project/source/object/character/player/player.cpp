@@ -37,7 +37,7 @@ Player::Player(RenderManager* pRenderManager,
 	,m_nOldEndTime(0)
 	, m_nNumClip(1)
 {
-	m_pModel = new SkinMeshModel("resource/model/naka.fbx");
+	m_pModel = new SkinMeshModel("resource/model/enemy.fbx");
 	m_pModel = pModelManager->SeekSkinMeshModel(m_pModel);
 
 	m_pSaveMesh = new SaveMesh[m_pModel->GetNumMesh()];
@@ -63,6 +63,7 @@ Player::Player(RenderManager* pRenderManager,
 		{
 			ePsType = PixelShader::PS_TOON;
 			Texture* pTexture = new Texture(m_pMesh[i].pFileName, pTextureManager);
+			//Texture* pTexture = new Texture("resource/sprite/NULL.jpg", pTextureManager);
 			pTextureResource = pTexture->GetTexture();
 		}
 		else
@@ -113,6 +114,8 @@ Player::Player(RenderManager* pRenderManager,
 		m_pAnimeClip[i].bStop = false;
 	}
 
+	m_pTransform->rot.x = 0;
+
 	m_nOldStartTime = m_pModel->GetAnime()->nStartTime;
 	m_nOldEndTime = m_pModel->GetAnime()->nEndTime;
 }
@@ -156,6 +159,15 @@ Player* Player::GetInstance(void)
 }
 
 ///////////////////////////////////////////////////////////////////////////////
+//インスタンス削除
+///////////////////////////////////////////////////////////////////////////////
+void Player::DeleteInstance(void)
+{
+	delete m_pPlayer;
+	m_pPlayer = NULL;
+}
+
+///////////////////////////////////////////////////////////////////////////////
 //初期化
 ///////////////////////////////////////////////////////////////////////////////
 HRESULT Player::Init(void)
@@ -184,6 +196,8 @@ void Player::Update(void)
 	Object::Update(); 
 	
 	static char str[10][256];
+	static char strStartTime[256] = "0";
+	static char strEndTime[256] = "0";
 
 	ImGui::Begin("anime_config");
 	{
@@ -215,12 +229,14 @@ void Player::Update(void)
 			m_pModel->GetAnime()->nStartTime = m_pAnimeClip[0].nStartTime;
 			m_pModel->GetAnime()->nEndTime = m_pAnimeClip[0].nEndTime;
 		}
+		ImGui::InputText("StartTimeEdit", strStartTime, IM_ARRAYSIZE(strStartTime));
 
 		if(ImGui::SliderInt("EndTime", &m_pAnimeClip[0].nEndTime, m_pModel->GetAnime()->nStartTime + 1, m_nOldEndTime))
 		{
 			m_pModel->GetAnime()->nStartTime = m_pAnimeClip[0].nStartTime;
 			m_pModel->GetAnime()->nEndTime = m_pAnimeClip[0].nEndTime;
 		}
+		ImGui::InputText("EndTimeEdit", strEndTime, IM_ARRAYSIZE(strEndTime));
 
 		ImGui::InputText("ClipName", str[m_nNumClip], IM_ARRAYSIZE(str));
 
@@ -233,6 +249,10 @@ void Player::Update(void)
 	}
 	ImGui::End();
 
+	m_pAnimeClip[0].nStartTime = atoi(strStartTime);
+	m_pAnimeClip[0].nEndTime = atoi(strEndTime);
+	m_pModel->GetAnime()->nStartTime = m_pAnimeClip[0].nStartTime;
+	m_pModel->GetAnime()->nEndTime = m_pAnimeClip[0].nEndTime;
 
 	for (int i = 1; i < m_nNumClip; i++)
 	{
@@ -325,19 +345,6 @@ void Player::MakeVertex(int nMeshCount, SkinMeshModel::Mesh* pMesh)
 		m_pSaveMesh[nMeshCount].IndexNumber[j] = pMesh[nMeshCount].pIndexNumber[j];
 	}
 
-	m_pSaveMesh[nMeshCount].cluster = new SaveCluster[pMesh[nMeshCount].nNumCluster];
-
-	for (int j = 0; j < pMesh[nMeshCount].nNumCluster; j++)
-	{
-		for (int k = 0; k < m_pModel->GetNumAnime(); k++)
-		{
-			for (int l = 0; l < m_pModel->GetAnime()->nEndTime; l++)
-			{
-				m_pSaveMesh[nMeshCount].cluster[j].pMatrix[k][l] = pMesh[nMeshCount].pCluster[j].pMatrix[k][l];
-			}
-		}
-	}
-
 	m_pSaveMesh[nMeshCount].LclPos = pMesh[nMeshCount].LclPos;
 	m_pSaveMesh[nMeshCount].LclRot = pMesh[nMeshCount].LclRot;
 	m_pSaveMesh[nMeshCount].LclScl = pMesh[nMeshCount].LclScl;
@@ -395,13 +402,13 @@ void Player::SaveFile(char* FileName)
 	int nNumClip = m_nNumClip - 1;
 
 	fprintf(pFile, "%d\n", nNumClip);//アニメーション数
-	for (int i = nNumClip-1; i > -1; i--)
+	for (int i = 0; i < nNumClip; i++)
 	{
 		//スタート
-		fprintf(pFile, "%d:", m_pAnimeClip[i].nStartTime);
+		fprintf(pFile, "%d:", m_pAnimeClip[i+1].nStartTime);
 
 		//エンド
-		fprintf(pFile, "%d\n", m_pAnimeClip[i].nEndTime);
+		fprintf(pFile, "%d\n", m_pAnimeClip[i+1].nEndTime);
 	}
 
 	//メッシュの数
@@ -463,10 +470,10 @@ void Player::SaveFile(char* FileName)
 		for (int j = 0; j < m_pSaveMesh[i].nNumCluster; j++)
 		{
 			pCluster[j].pMatrix = new XMMATRIX*[nNumClip];
-			for (int k = nNumClip -1; k > -1 ; k--)
+			for (int k = 0; k < nNumClip; k++)
 			{
-				pCluster[j].pMatrix[k] = new XMMATRIX[m_pAnimeClip[k].nEndTime];
-				for (int l = m_pAnimeClip[k].nStartTime; l < m_pAnimeClip[k].nEndTime; l++)
+				pCluster[j].pMatrix[k] = new XMMATRIX[m_pAnimeClip[k+1].nEndTime];
+				for (int l = m_pAnimeClip[k+1].nStartTime; l < m_pAnimeClip[k+1].nEndTime; l++)
 				{
 					pCluster[j].pMatrix[k][l] = m_pMesh[i].pCluster[j].pMatrix[0][l];
 

@@ -178,6 +178,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 			of.lpstrDefExt = "taso";
 			if (GetOpenFileName(&of))
 			{
+				Player::DeleteInstance();
 				Player* pPlayer = Player::GetInstance();
 			}
 			InvalidateRect(hWnd, NULL, FALSE);

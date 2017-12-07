@@ -43,6 +43,9 @@ public:
 	//インスタンス取得
 	static Player* GetInstance(void);
 
+	//インスタンス削除
+	static void DeleteInstance(void);
+
 	//初期化
 	HRESULT Init(void);
 

@@ -49,6 +49,9 @@ protected:
 	//サンプラーステート設定
 	void ConfigSamplerState(void);
 
+	//ブレンドステート設定
+	void ConfigBlendState(void);
+
 	ID3D11BlendState*					m_pBlendState;
 
 	ID3D11SamplerState*					m_pSampleLinear;
